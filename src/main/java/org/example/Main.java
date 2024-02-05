@@ -11,8 +11,19 @@ public class Main {
         System.out.print("Nombre y apellidos: ");
         String nombre = scanner.nextLine();
 
-        System.out.print("Tipo de cliente (Regular/VIP): ");
-        String tipoCliente = scanner.nextLine();
+        String tipoCliente;
+        while (true){
+            System.out.println("Tipo de cliente (Regular/VIP): ");
+            tipoCliente = scanner.nextLine();
+
+            if (tipoCliente.equalsIgnoreCase("Regular") || tipoCliente.equalsIgnoreCase("VIP")){
+                break;
+
+            }else {
+                System.out.println("Tipo de cliente no valido. Por favor ingresa un tipo de cliente valido");
+            }
+        }
+
 
         System.out.print("Cantidad de artículos: ");
         int cantidadArticulos = scanner.nextInt();
